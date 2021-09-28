@@ -1,6 +1,5 @@
 name: Bug report
 description: "Something not working as expected? 🐞 description"
-title: ""
 labels: [ "type:bug \U0001F41E" ]
 body:
   - type: markdown
@@ -20,7 +19,7 @@ body:
       label: Steps to reproduce
       description: Which steps do we need to take to reproduce this error? (URL, actions)
   - type: textarea
-    id: steps
+    id: expectations
     attributes:
       label: Expected Behavior
       description: What did you expect to see?
