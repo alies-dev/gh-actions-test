@@ -1,0 +1,36 @@
+name: Bug report
+description: "Something not working as expected? 🐞 description"
+title: ""
+labels: [ "type:bug \U0001F41E" ]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Before opening a bug report, please search for the behaviour in the existing issues.
+  - type: textarea
+    id: bug-description
+    attributes:
+      label: Bug description
+      description: What happened?
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: Which steps do we need to take to reproduce this error? (URL, actions)
+  - type: textarea
+    id: steps
+    attributes:
+      label: Expected Behavior
+      description: What did you expect to see?
+  - type: textarea
+    id: context
+    attributes:
+      label: Context info
+      description: Important context info (visitor’s state, browser info for front-end issues).
+      placeholder: "ex. Member#123 (expired Professional) who doesn’t have a PaymentMethod"
+  - type: markdown
+    attributes:
+      value: |
+        [https://github.com/InteractionDesignFoundation/IxDF-web/tree/develop/docs/domain/systems-and-code-owners.md](Assign one developer to fix the issue.)
