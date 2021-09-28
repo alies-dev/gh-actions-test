@@ -1,4 +1,4 @@
-name: Bug report
+name: Bug report (form)
 description: "Something not working as expected? 🐞 description"
 labels: [ "type:bug \U0001F41E" ]
 body:
