@@ -20,7 +20,7 @@ jobs:
         run: ls -la
 
       - name: Test join
-        run: echo ${{ join(steps.output_something.outputs.*, '\n')) }}
+        run: echo ${{ join(steps.output_something.outputs.*, '\n') }}
 
       - name: Submit Psalm output to store stats
         run: |
