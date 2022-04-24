@@ -15,12 +15,13 @@ jobs:
         with:
           ref: ${{ github.head_ref }}
 
-        # URL to parse output (use development@interaction-design.org google account): https://script.google.com/u/1/home/projects/18yRzYZ2QFoEHUAgGaGjXENKnwcHgpJDe4DEDA0J0W5xjcRRi7-D5-Oj0/edit
       - name: Produce test output
         id: output_something
         run: ls -la
 
-      # URL to parse output (use development@interaction-design.org google account): https://script.google.com/u/1/home/projects/18yRzYZ2QFoEHUAgGaGjXENKnwcHgpJDe4DEDA0J0W5xjcRRi7-D5-Oj0/edit
+      - name: Test join
+        run: echo ${{ join(steps.output_something.outputs.*, '\n')) }}
+
       - name: Submit Psalm output to store stats
         run: |
           curl -X POST https://script.google.com/macros/s/AKfycbzjLGk5RWNmNOHLQUhCH1vToqAyvm_16UkNr8Hin--5g7QD8ziEZPcZnWlefUVZlln7Xw/exec \
