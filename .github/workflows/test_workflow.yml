@@ -2,6 +2,9 @@ name: 'Test'
 
 on:
   workflow_dispatch:
+  push:
+    paths:
+      - '.github/workflows/test_workflow.yml'
 
 jobs:
   update_psalm_baseline:
