@@ -20,8 +20,8 @@ jobs:
       # URL to parse output (use development@interaction-design.org google account): https://script.google.com/u/1/home/projects/18yRzYZ2QFoEHUAgGaGjXENKnwcHgpJDe4DEDA0J0W5xjcRRi7-D5-Oj0/edit
       - name: Submit Psalm output to store stats
         run: |
-          psalmOutput = toJSON(join(steps.output_something.outputs.*, '\n')) \
+          psalmOutput = ${{ join(steps.output_something.outputs.*, '\n') }} \
           curl -X POST https://script.google.com/macros/s/AKfycbzjLGk5RWNmNOHLQUhCH1vToqAyvm_16UkNr8Hin--5g7QD8ziEZPcZnWlefUVZlln7Xw/exec \
           -H 'Content-Type: application/json' \
           -H 'Accept: application/json' \
-          -d '{"output": "$psalmOutput" }'
+          -d '{"output": "${{ toJSON($psalmOutput) }}" }'
